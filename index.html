@@ -14342,9 +14342,9 @@ var init={
         });
         div.append(title).append(line).append(text).append(platform);
         $("#content10").append(div);
-        // $(".contact2_platform_li").bind("click",function(){
-        //     window.location.href=$(this).attr("hrefline");
-        // });
+        $(".contact2_platform_li").bind("click",function(){
+            window.location.href=$(this).attr("hrefline");
+        });
         $("#content10>.particles-js-canvas-el").css("height",$("#content10").outerHeight());
     },
     end:function(){
