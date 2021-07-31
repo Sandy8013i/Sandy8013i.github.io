@@ -13563,7 +13563,7 @@ var contactPlat=[
  //    {"id":"1","name":"twitter","iconid":"contact2_plat_twitter","href":"https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fwww.red-lang.org%2F&ref_src=twsrc%5Etfw&screen_name=red_lang&tw_p=followbutton"},
  //    {"id":"2","name":"googleplus","iconid":"contact2_plat_googleplus","href":"https://plus.google.com/share?app=110&url=http%3A%2F%2Fwww.red-lang.org%2F"},
 	// {"id":"3","name":"github","iconid":"contact2_plat_github","href":"https://github.com/red/red"},
- //    {"id":"4","name":"mail","iconid":"contact2_plat_mail","href":"mailto:ico@red-lang.org"},
+    {"id":"4","name":"mail","iconid":"contact2_plat_telegram","href":"https://t.me/internationalRedDot"},
     {"id":"5","name":"mail","iconid":"contact2_plat_telegram","href":"https://t.me/RedDotOfficial"}]
 
 var end=[{"id":"0","name":"text","contenten":"RedDot currency.","contentcn":"Red Foundation - Paris, France.","contentcnhk":"Red Foundation - Paris, France."},
@@ -14336,10 +14336,14 @@ var init={
         var line=$("<label class='contact2_line parts_title_line'><label></label></label>");
         var text=$("<label class='contact2_text parts_title_text'>"+contact2[1]["content"+lag]+"</label>");
         var platform=$("<ul class='contact2_platform_ul'></ul>");
-        $.each(contactPlat,function(i,item){
-            var li=$("<a class='contact2_platform_li' id='"+item.iconid+"' href='https://t.me/RedDotOfficial'></a><br id='"+item.iconid+"_br' class='phoneBr_contact2'/>");
-            platform.append(li);
-        });
+//         $.each(contactPlat,function(i,item){
+//             var li=$("<a class='contact2_platform_li' id='"+item.iconid+"' href='https://t.me/RedDotOfficial'></a><br id='"+item.iconid+"_br' class='phoneBr_contact2'/>");
+//             platform.append(li);
+//         });
+	var li1=$("<a class='contact2_platform_li' id='"+contactPlat[0].iconid+"' href='https://t.me/RedDotOfficial'></a><br id='"+contactPlat[0].iconid+"_br' class='phoneBr_contact2'/>");
+        var li2=$("<a class='contact2_platform_li' id='"+contactPlat[1].iconid+"' href='https://t.me/internationalRedDot'></a><br id='"+contactPlat[1].iconid+"_br' class='phoneBr_contact2'/>");
+		platform.append(li1);
+		platform.append(li2);
         div.append(title).append(line).append(text).append(platform);
         $("#content10").append(div);
         $(".contact2_platform_li").bind("click",function(){
